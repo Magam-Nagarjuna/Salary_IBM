@@ -1,0 +1,71 @@
+SalaryPredict AI Project Documentation
+
+1. Problem Statement
+--------------------
+In today's competitive job market, professionals often struggle to estimate their fair market salary based on their profile and experience. This project aims to develop a machine learning-powered web application that predicts an individual's expected salary using their demographic and professional attributes. The goal is to empower users with data-driven insights to make informed career decisions and negotiate salaries confidently.
+
+2. System Development Approach (Technology Used)
+------------------------------------------------
+- Backend: Python with Flask framework to build the web server and API endpoints.
+- Machine Learning: scikit-learn library for model training and prediction.
+- Data Processing: pandas and numpy for data manipulation and preprocessing.
+- Model Persistence: joblib for saving and loading trained models and preprocessing objects.
+- PDF Generation: FPDF library to generate downloadable salary prediction reports.
+- Frontend: HTML, CSS, JavaScript for user interface and interaction.
+- Visualization: Chart.js for interactive job market visualizations.
+- Additional Libraries: LabelEncoder and MinMaxScaler from scikit-learn for encoding categorical variables and feature scaling.
+
+3. Algorithm & Deployment (Step by Step Procedure)
+--------------------------------------------------
+Step 1: Data Collection and Cleaning
+- Load the salary dataset containing features such as Age, Gender, Education Level, Job Title, Years of Experience, and Salary.
+- Handle missing values by removing incomplete records.
+- Remove outliers in Age to keep values within a reasonable range (18 to 75 years).
+
+Step 2: Feature Engineering
+- Encode categorical variables (Gender, Education Level, Job Title) using Label Encoding.
+- Scale features using MinMaxScaler to normalize the data.
+
+Step 3: Model Training and Evaluation
+- Split the dataset into training and testing sets (80% train, 20% test).
+- Train multiple regression models including Linear Regression, Random Forest, K-Nearest Neighbors, Support Vector Regressor, Gradient Boosting, Decision Tree, and XGBoost.
+- Evaluate models using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and R-squared (R2) score.
+- Select the best performing model based on the highest R2 score.
+
+Step 4: Model Persistence
+- Save the best model, scaler, and label encoders using joblib for later use in the web application.
+
+Step 5: Web Application Deployment
+- Develop a Flask web application with routes for home, prediction form, prediction processing, and PDF report generation.
+- Load the saved model, scaler, and encoders at application startup.
+- Accept user inputs via a form, preprocess inputs, and predict salary.
+- Convert predicted salary from USD to INR and add a small random noise for realism.
+- Display the predicted salary on the web page.
+- Generate a detailed PDF report with prediction and user profile details for download.
+
+4. Result
+---------
+- The application provides accurate salary predictions based on user inputs.
+- Users can interact with a clean, user-friendly web interface.
+- Interactive visualizations offer insights into global job market trends.
+- PDF reports summarize the prediction and user profile for offline reference.
+- The best regression model achieved a high R2 score, indicating good predictive performance.
+
+5. Conclusion
+-------------
+SalaryPredict AI successfully demonstrates the integration of machine learning with web technologies to deliver a practical tool for salary estimation. By leveraging multiple regression models and selecting the best performer, the system provides reliable predictions. The user-friendly interface and report generation enhance usability and accessibility.
+
+6. Future Scope (Optional)
+--------------------------
+- Expand the dataset to include international job markets for broader applicability.
+- Integrate a chatbot interface for interactive salary-related queries.
+- Enhance the UI/UX with personalized recommendations and career advice.
+- Incorporate additional features such as industry trends, company reviews, and skill gap analysis.
+
+7. References
+-------------
+- scikit-learn documentation: https://scikit-learn.org/
+- Flask documentation: https://flask.palletsprojects.com/
+- FPDF documentation: http://www.fpdf.org/
+- Salary Data source: Provided dataset "Salary Data.csv"
+- Chart.js documentation: https://www.chartjs.org/
