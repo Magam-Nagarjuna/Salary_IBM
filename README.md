@@ -77,3 +77,7 @@ This project is for educational purposes only and should not be used for commerc
 ## Disclaimer
 
 Model predictions are based on the provided dataset and may not reflect all market conditions or individual circumstances.
+
+## Live Demo
+
+Access the live application here: https://salary-predict-ai.onrender.com/
