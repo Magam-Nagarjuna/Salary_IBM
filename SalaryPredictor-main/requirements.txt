@@ -1,7 +1,5 @@
-flask
-scikit-learn
+Flask
+numpy
 joblib
 fpdf
-pandas
-numpy
-gunicorn
+scikit-learn
